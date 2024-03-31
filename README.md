@@ -1,1 +1,1 @@
-Dashboard realizado como parte del proyecto para Digita Hoouse.
+Dashboard realizado como parte del proyecto para Digita House.
