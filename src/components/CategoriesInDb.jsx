@@ -1,18 +1,16 @@
-/* import { response } from "express"; */
 import React, {Component} from "react";
 
 const fetch= require('node-fetch')
 
 
 
-class GenresInDb extends Component {
-  constructor(props) {
-    super(props);
+class CategoriesInDb extends Component {
+  constructor() {
+    super();
     this.state = {
       countByCategory: {}
     };
-  }
-
+  };
   componentDidMount() {
     fetch('http://localhost:3020/api/products/', {
       method: 'GET',
@@ -23,16 +21,14 @@ class GenresInDb extends Component {
     .then(response => response.json())
     .then(data => {
       this.setState({ countByCategory: data.meta.countByCategory });
-      console.log('Data fetched:', data);
+      console.log('Data fetched:', data.meta.countByCategory);
     })
     .catch(error => {
       console.error('Error fetching data:', error);
     });
-  }
-
+  };
   render() {
     const { countByCategory } = this.state;
-
     return (
       <div className="col-lg-6 mb-4">
         <div className="card shadow mb-4">
@@ -47,6 +43,7 @@ class GenresInDb extends Component {
                 <div key={index} className="col-lg-6 mb-4">
                   <div className="card bg-dark text-white shadow">
                     <div className="card-body">{category}</div>
+                    <p className="card-text">Productos: {countByCategory[category]}</p> {/* El valor 'category' entre corchetes sirve como iterador entre los elementos del array 'countByCategory' */}
                   </div>
                 </div>
               ))}
@@ -58,4 +55,4 @@ class GenresInDb extends Component {
   }
 }
 
-export default GenresInDb;
+export default CategoriesInDb;

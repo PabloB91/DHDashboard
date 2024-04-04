@@ -1,11 +1,13 @@
 import React from 'react';
 import image from '../assets/images/logo-DH.png';
 import ContentWrapper from './ContentWrapper';
-import GenresInDb from './GenresInDb';
+import CategoriesInDb from './CategoriesInDb';
 import LastMovieInDb from './LastMovieInDb';
+import LastMovieDetail from './LastMovieDetail';
 import ContentRowMovies from './ContentRowMovies';
 import NotFound from './NotFound';
 import {Link, Route, Switch} from 'react-router-dom';
+
 
 function SideBar(){
     {/* CONTENIDO DE LA BARRA LATERAL CON TODOS LOS LINKS */}
@@ -39,7 +41,7 @@ function SideBar(){
 
                 {/*<!-- Nav Item - Pages -->*/}
                 <li className="nav-item">
-                <Link className="nav-link" to="/GenresInDb">
+                <Link className="nav-link" to="/CategoriesInDb">
                         <i className="fas fa-fw fa-folder"></i>
                         <span>Pages</span>
                     </Link>
@@ -47,7 +49,7 @@ function SideBar(){
 
                 {/*<!-- Nav Item - Charts -->*/}
                 <li className="nav-item">
-                    <Link className="nav-link" to="/LastMovieInDb">
+                    <Link className="nav-link" to="/LastMovieDetail">
                         <i className="fas fa-fw fa-chart-area"></i>
                         <span>Charts</span></Link>
                 </li>
@@ -84,11 +86,11 @@ function SideBar(){
                 <Route exact path="/">
                     <ContentWrapper />      {/* CONTENIDO DEL HOME */}
                 </Route>
-                <Route path="/GenresInDb">
-                    <GenresInDb />          {/* CONTENIDO DEL BOTÓN 'PAGES' */}
+                <Route path="/CategoriesInDb">
+                    <CategoriesInDb />          {/* CONTENIDO DEL BOTÓN 'PAGES' */}
                 </Route>
-                <Route path="/LastMovieInDb">
-                    <LastMovieInDb />       {/* CONTENIDO DEL BOTÓN 'CHARTS' */}
+                <Route path="/LastMovieDetail">
+                    <LastMovieDetail />       {/* CONTENIDO DEL BOTÓN 'CHARTS' */}
                 </Route>
                 <Route path="/ContentRowMovies">
                     <ContentRowMovies />    {/* CONTENIDO DEL BOTÓN 'TABLES' */}

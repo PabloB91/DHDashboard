@@ -3,7 +3,7 @@ import SmallCard from './SmallCard';
 
 /*  Cada set de datos es un objeto literal */
 
-/* <!-- Movies in DB --> */
+/* <!-- Fetchear los productos --> */
 
 let moviesInDB = {
     title: 'Movies in Data Base',
@@ -12,7 +12,7 @@ let moviesInDB = {
     icon: 'fa-clipboard-list'
 }
 
-/* <!-- Total awards --> */
+/* <!-- Fetchear las categorías --> */
 
 let totalAwards = {
     title:' Total awards', 
@@ -21,7 +21,7 @@ let totalAwards = {
     icon:'fa-award'
 }
 
-/* <!-- Actors quantity --> */
+/* <!-- Fetchear los usuarios --> */
 
 let actorsQuantity = {
     title:'Actors quantity' ,
