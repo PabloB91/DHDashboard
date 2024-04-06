@@ -21,7 +21,7 @@ class CategoriesInDb extends Component {
     .then(response => response.json())
     .then(data => {
       this.setState({ countByCategory: data.meta.countByCategory });
-      console.log('Data fetched:', data.meta.countByCategory);
+      /* console.log('Data fetched:', data.meta.countByCategory); */
     })
     .catch(error => {
       console.error('Error fetching data:', error);

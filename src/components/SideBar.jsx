@@ -4,8 +4,8 @@ import imageHover from '../assets/images/Logo-soundBox-hover.svg';
 import foto from '../assets/images/simbolequalizer_white.svg';
 import ContentWrapper from './ContentWrapper';
 import CategoriesInDb from './CategoriesInDb';
-import LastMovieInDb from './LastMovieInDb';
-import LastMovieDetail from './LastMovieDetail';
+/* import LastProductInDb from './LastProductInDb'; */
+import LastProductDetail from './LastProductDetail';
 import ContentRowMovies from './ContentRowMovies';
 import NotFound from './NotFound';
 import {Link, Route, Switch} from 'react-router-dom';
@@ -45,14 +45,14 @@ function SideBar(){
                 {/*<!-- Nav Item - Pages -->*/}
                 <li className="nav-item">
                 <Link className="nav-link" to="/CategoriesInDb">
-                        <i className="fas fa-headphones"></i>
+                        <i className="fas fa-clipboard-list"></i>
                         <span>Categories</span>
                     </Link>
                 </li>
 
                 {/*<!-- Nav Item - Charts -->*/}
                 <li className="nav-item">
-                    <Link className="nav-link" to="/LastMovieDetail">
+                    <Link className="nav-link" to="/LastProductDetail">
                         <i className="fas fa-guitar"></i>
                         <span>Products</span></Link>
                 </li>
@@ -92,8 +92,8 @@ function SideBar(){
                 <Route path="/CategoriesInDb">
                     <CategoriesInDb />          {/* CONTENIDO DEL BOTÓN 'PAGES' */}
                 </Route>
-                <Route path="/LastMovieDetail">
-                    <LastMovieDetail />       {/* CONTENIDO DEL BOTÓN 'CHARTS' */}
+                <Route path="/LastProductDetail">
+                    <LastProductDetail />       {/* CONTENIDO DEL BOTÓN 'CHARTS' */}
                 </Route>
                 <Route path="/ContentRowMovies">
                     <ContentRowMovies />    {/* CONTENIDO DEL BOTÓN 'TABLES' */}

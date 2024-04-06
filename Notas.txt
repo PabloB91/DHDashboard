@@ -2,3 +2,5 @@
 Instalar node-fetch, versión 2.6.6 (porque permite utilizar el método 'require', sino obliga a usar 'import' en todos los archivos) con 'npm install node-fetch@2.6.6'
 
 También hay que instalar el paquete CORS con 'npm install cors'
+
+Juanse tiene que poner "NODE_ENV=production node_modules/react-scripts/bin/react-scripts.js start" en 'scripts: start" del 'package.json'
