@@ -1,5 +1,7 @@
 import React from 'react';
-import image from '../assets/images/logo-DH.png';
+import image from '../assets/images/Logo-soundBox.svg';
+import imageHover from '../assets/images/Logo-soundBox-hover.svg';
+import foto from '../assets/images/simbolequalizer_white.svg';
 import ContentWrapper from './ContentWrapper';
 import CategoriesInDb from './CategoriesInDb';
 import LastMovieInDb from './LastMovieInDb';
@@ -19,7 +21,8 @@ function SideBar(){
                 {/*<!-- Sidebar - Brand -->*/}
                 <a className="sidebar-brand d-flex align-items-center justify-content-center" href="/">
                     <div className="sidebar-brand-icon">
-                        <img className="w-100" src={image} alt="Digital House"/>
+                        <img className="w-100" src={image} alt="SOUNDBOX"/>
+                        <img className="w-100-hover" src={imageHover} alt="SOUNDBOX"/>
                     </div>
                 </a>
 
@@ -29,8 +32,8 @@ function SideBar(){
                 {/*<!-- Nav Item - Dashboard -->*/}
                 <li className="nav-item active">
                     <Link className="nav-link" to="/">
-                        <i className="fas fa-fw fa-tachometer-alt"></i>
-                        <span>Dashboard - DH movies</span></Link>
+                        <img className="equalizer" src={foto}></img>
+                        <span>Dashboard</span></Link>
                 </li>
 
                 {/*<!-- Divider -->*/}
@@ -42,23 +45,23 @@ function SideBar(){
                 {/*<!-- Nav Item - Pages -->*/}
                 <li className="nav-item">
                 <Link className="nav-link" to="/CategoriesInDb">
-                        <i className="fas fa-fw fa-folder"></i>
-                        <span>Pages</span>
+                        <i className="fas fa-headphones"></i>
+                        <span>Categories</span>
                     </Link>
                 </li>
 
                 {/*<!-- Nav Item - Charts -->*/}
                 <li className="nav-item">
                     <Link className="nav-link" to="/LastMovieDetail">
-                        <i className="fas fa-fw fa-chart-area"></i>
-                        <span>Charts</span></Link>
+                        <i className="fas fa-guitar"></i>
+                        <span>Products</span></Link>
                 </li>
 
                 {/*<!-- Nav Item - Tables -->*/}
                 <li className="nav-item nav-link">
                 <Link className="nav-link" to="/ContentRowMovies">
-                        <i className="fas fa-fw fa-table"></i>
-                        <span>Tables</span></Link>
+                        <i className="fas fa-user"></i>
+                        <span>Users</span></Link>
                 </li>
 
                 {/*<!-- Divider -->*/}
