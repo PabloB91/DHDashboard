@@ -6,7 +6,7 @@ import ContentWrapper from './ContentWrapper';
 import CategoriesInDb from './CategoriesInDb';
 /* import LastProductInDb from './LastProductInDb'; */
 import LastProductDetail from './LastProductDetail';
-import ContentRowMovies from './ContentRowMovies';
+import Chart from './Chart';
 import NotFound from './NotFound';
 import {Link, Route, Switch} from 'react-router-dom';
 
@@ -50,18 +50,25 @@ function SideBar(){
                     </Link>
                 </li>
 
-                {/*<!-- Nav Item - Charts -->*/}
+                {/*<!-- Nav Item - Ultimo -->*/}
                 <li className="nav-item">
                     <Link className="nav-link" to="/LastProductDetail">
                         <i className="fas fa-guitar"></i>
-                        <span>Products</span></Link>
+                        <span>Último Producto Agregado</span></Link>
                 </li>
 
                 {/*<!-- Nav Item - Tables -->*/}
                 <li className="nav-item nav-link">
-                <Link className="nav-link" to="/ContentRowMovies">
+                <Link className="nav-link" to="/Chart">
+                        <i className="fas fa-box"></i>
+                        <span>Productos</span></Link>
+                </li>
+
+                {/*<!-- Nav Item - Tables -->*/}
+                <li className="nav-item nav-link">
+                <Link className="nav-link" to="/ContentRowProducts">
                         <i className="fas fa-user"></i>
-                        <span>Users</span></Link>
+                        <span>Usuarios</span></Link>
                 </li>
 
                 {/*<!-- Divider -->*/}
@@ -95,8 +102,8 @@ function SideBar(){
                 <Route path="/LastProductDetail">
                     <LastProductDetail />       {/* CONTENIDO DEL BOTÓN 'CHARTS' */}
                 </Route>
-                <Route path="/ContentRowMovies">
-                    <ContentRowMovies />    {/* CONTENIDO DEL BOTÓN 'TABLES' */}
+                <Route path="/Chart">
+                    <Chart />    {/* CONTENIDO DEL BOTÓN 'TABLES' */}
                 </Route>
                 <Route component={NotFound} />
             </Switch>

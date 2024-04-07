@@ -37,19 +37,19 @@ class ContentRowProducts extends Component {
         //--> Creamos los objetos literales con la información que va a mostrarse en cada tarjeta, y los pasamos como 'props',
         //-- utilizamos las variables configuradas en el estado del componente para mostrar la información de cantidades (products, cateogries, users).
         let productsInDB = {
-            title: 'Products in Data Base',
+            title: 'Productos en la Base de Datos',
             color: 'primary', 
             quantity: products,
             icon: 'fa-guitar'
         };
         let categoriesInDB = {
-            title: 'Categories in Data Base',
+            title: 'Categorías en la Base de Datos',
             color: 'primary', 
             quantity: categories,
             icon: 'fa-clipboard-list'
         }
         let usersInDB = {
-            title: 'Users in Data Base',
+            title: 'Usuarios en la Base de Datos',
             color: 'primary', 
             quantity: users,
             icon: 'fa-user'
