@@ -8,25 +8,21 @@ class Chart extends Component {
     constructor() {
         super();
         this.state = {
-            products: "",
-            categories: ""
+            products: ""
         };
     }
     componentDidMount() {
         fetchProducts().then(data => {      //--> Utilizamos la función importada para obtener la información de los productos
             /* console.log(data.data.products); */
-            const categoriesCount=Object.keys(data.data.meta.countByCategory).length    //-->Esto busca y cuenta las llaves dentro del objeto 'data' que trae la función (en este caso son los nombres de las categorías)
-            const productCount= data.data.meta.count    //-->Esto busca el valor de la llave 'count' dentro del objeto 'data' que trae la función (en este caso es el número de productos)
-            /* console.log(productCount); */
-            this.setState({products: data.data.products, categories: categoriesCount})
+            this.setState({products: data.data.products})
         });
     }
     render() {
         const {products}= this.state
-        let tableRowsData= [];
+        let tableRowsData= [];      //--> Creamos el array para pasar como 'props'
         for (const iterator of products) {
             /* console.log(iterator); */
-            tableRowsData.push( 
+            tableRowsData.push(         //--> Poblamos el array con los datos que incorporamos al componente a través de 'fetch'
                 {
                     Nombre: iterator.name,
                     Descripcion: iterator.description,
@@ -48,16 +44,15 @@ class Chart extends Component {
                             <thead>
                                 <tr>
                                     <th>Nombre</th>
-                                    <th>Descripcion</th>
-                                    <th>Categoria</th>
+                                    <th>Descripción</th>
+                                    <th>Categoría</th>
                                     <th>Colores</th>
-                                    <th>Detalle</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 {
                                 tableRowsData.map( ( row , i) => {
-                                    return <ChartRow { ...row} key={i}/>
+                                    return <ChartRow { ...row} key={i}/>    //--> Pasamos el array como 'prop'
                                 })
                                 }
 

@@ -31,6 +31,7 @@
     --danger: #e74a3b;
     --light: #f8f9fc;
     --dark: #5a5c69;
+    --soundbox: #FF540A;
     --breakpoint-xs: 0;
     --breakpoint-sm: 576px;
     --breakpoint-md: 768px;
@@ -100,8 +101,8 @@ h6 {
 p {
     margin: auto;
     padding-bottom: 0.5rem;
-    font-size: small;
-    font-weight: 200
+    font-size: medium;
+    font-weight: 700
 }
 
 abbr[data-original-title],
@@ -10535,6 +10536,10 @@ a.text-dark:hover {
     color: #373840 !important
 }
 
+.text-soundbox {
+    color: #FF540A !important
+}
+
 .text-body {
     color: #858796 !important
 }
@@ -10890,7 +10895,7 @@ a:focus {
 }
 
 .text-xs {
-    font-size: .7rem
+    font-size: .8rem
 }
 
 .text-lg {
@@ -11004,6 +11009,10 @@ a:focus {
 
 .border-left-dark {
     border-left: .25rem solid #5a5c69 !important
+}
+
+.border-left-soundbox {
+    border-left: .25rem solid #FF540A !important
 }
 
 .border-bottom-dark {

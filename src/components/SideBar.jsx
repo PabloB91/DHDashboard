@@ -32,7 +32,7 @@ function SideBar(){
                 {/*<!-- Nav Item - Dashboard -->*/}
                 <li className="nav-item active">
                     <Link className="nav-link" to="/">
-                        <img className="equalizer" src={foto}></img>
+                        <img className="equalizer" src={foto} alt='Foto Admin'></img>
                         <span>Dashboard</span></Link>
                 </li>
 
@@ -62,13 +62,6 @@ function SideBar(){
                 <Link className="nav-link" to="/Chart">
                         <i className="fas fa-box"></i>
                         <span>Productos</span></Link>
-                </li>
-
-                {/*<!-- Nav Item - Tables -->*/}
-                <li className="nav-item nav-link">
-                <Link className="nav-link" to="/ContentRowProducts">
-                        <i className="fas fa-user"></i>
-                        <span>Usuarios</span></Link>
                 </li>
 
                 {/*<!-- Divider -->*/}

@@ -49,7 +49,7 @@ class LastProductInDb extends Component {
                     </div>
                     <div className="card-body">
                         <div className="text-center">
-                            <img className="img-fluid px-3 px-sm-4 mt-3 mb-4" style={{ width: 40 + 'rem' }} 
+                            <img className="img-fluid px-3 px-sm-4 mt-3 mb-4" style={{ width: 50 + '%' }} 
                             src={lastProduct.image} alt={lastProduct.description} />
                         </div>
                         <p>{lastProduct.description}</p>

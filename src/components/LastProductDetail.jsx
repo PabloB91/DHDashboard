@@ -7,7 +7,7 @@ class LastProductDetail extends Component {
     constructor() {
         super();
         this.state = {
-            lastProduct: {},
+            lastProduct: {}
         };
     }
     componentDidMount() {
@@ -22,6 +22,7 @@ class LastProductDetail extends Component {
             .then(response => response.json())
             .then(data => {
                 /* console.log('Data fetched:', data.product);  */
+                /* console.log(data.product.colors.join(', ')); */
                 this.setState({ lastProduct: data.product });
             })
             .catch(error => {
@@ -31,6 +32,8 @@ class LastProductDetail extends Component {
     }
     render() {
         const { lastProduct } = this.state;
+        const colors = lastProduct.colors ? lastProduct.colors.join(', ') : '';  //--> Utilizamos esto para que al renderizar colores se vean separados por comas
+
         return (
             <div className="col-lg-6 mb-4">
                 <div className="card shadow mb-4">
@@ -40,13 +43,13 @@ class LastProductDetail extends Component {
                     <div className="card-body">
                         <p>{lastProduct.name}</p>
                         <div className="text-center">
-                            <img className="img-fluid px-3 px-sm-4 mt-3 mb-4" style={{ width: 40 + 'rem' }} 
+                            <img className="img-fluid px-3 px-sm-4 mt-3 mb-4" style={{ width: 50+ '%' }} 
                             src={lastProduct.image} alt={lastProduct.description} />
                         </div>
                         <p>{lastProduct.description}</p>
                         <p>Marca: {lastProduct.brand}</p>
                         <p>Categoría: {lastProduct.category}</p>
-                        <p>Colores disponibles: {lastProduct.colors}</p>
+                        <p>Colores disponibles: {colors}</p>
                         <p>Precio ${lastProduct.price}</p>
                         <p>Descuento: {lastProduct.discount}%</p>
                         <p>Stock disponible: {lastProduct.quantity}</p>
